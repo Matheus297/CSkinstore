@@ -49,7 +49,7 @@ export default function Home() {
     if(search === 'category') {
       getItemByFilter(cleanParams);
     }
-  }, [window.location.search]);
+  }, [search]);
 
   const getItemByFilter = async (params?: {category?: string, name?: string, min?: number, max?: number, float?: string} | null) => {
     try {
