@@ -6,7 +6,7 @@ import Link from "next/link";
 
 
 interface Props {
-    isActive?: boolean
+    $isActive?: boolean
 }
 
 
@@ -54,7 +54,7 @@ export const LinkCustom = styled(Link)<Props>`
     text-decoration: none; 
 
     &:active {
-        color: ${props => props.isActive ? 'rgba(255, 255, 255, 1)' : 'rgba(255, 255, 255, 0.5)'};
+        color: rgba(255, 255, 255, 1);
     }
 `;
 

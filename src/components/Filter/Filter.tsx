@@ -48,12 +48,12 @@ export const FilterComponent = ({ children }: Props) => {
         <Filter>
             <FilterNav>
                 <NavbarContent id="navbarBasicExample">
-                            <LinkCustom isActive={category === 'sniper'} href={{
+                            <LinkCustom  href={{
                                     query: { category: 'sniper' }
                                 }}>
                                 <h1>Rifle de precisão</h1>
                             </LinkCustom>
-                            <LinkCustom isActive={category === 'assalt'}
+                            <LinkCustom 
                                 href={{
                                     query: { category: 'assalt' }
                                 }} 
@@ -62,7 +62,7 @@ export const FilterComponent = ({ children }: Props) => {
                                 <h1>Rifle de assalto</h1>
                             </LinkCustom>
                             <LinkCustom
-                                isActive={category === 'sub'}
+                                
                                 href={{
                                     query: { category: 'sub' }
                                 }} 
@@ -71,7 +71,7 @@ export const FilterComponent = ({ children }: Props) => {
                                 <h1>Metralhadora</h1>
                             </LinkCustom>
                             <LinkCustom
-                                isActive={category === 'lmg'}
+                                
                                 href={{
                                     query: { category: 'lmg' }
                                 }} 
@@ -80,7 +80,7 @@ export const FilterComponent = ({ children }: Props) => {
                                 <h1>Rifle pesado</h1>
                             </LinkCustom>
                             <LinkCustom
-                                isActive={category === 'shotgun'}
+                                
                                 href={{
                                     query: { category: 'shotgun' }
                                 }} 
@@ -89,7 +89,7 @@ export const FilterComponent = ({ children }: Props) => {
                                 <h1>Escopeta</h1>
                             </LinkCustom>
                             <LinkCustom
-                                isActive={category === 'gloves'}
+                                
                                 href={{
                                     query: { category: 'gloves' }
                                 }} 
@@ -97,7 +97,7 @@ export const FilterComponent = ({ children }: Props) => {
                             >
                                 <h1>Luva</h1>
                             </LinkCustom>
-                            <LinkCustom isActive={category === 'knifes'}
+                            <LinkCustom 
                                 href={{
                                     query: { category: 'knifes' }
                                 }} 

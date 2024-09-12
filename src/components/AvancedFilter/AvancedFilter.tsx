@@ -106,7 +106,7 @@ const marks = [
                     <CurrencyInput value={minValue} setValue={setMinValue} />
                     <CurrencyInput value={maxValue} setValue={setMaxValue} />
                     <BoxStyleButtons>
-                        <WrapperButtonDesc isActive={ascFilter} onClick={() => setAscFilter(!ascFilter)}>
+                        <WrapperButtonDesc $isActive={ascFilter} onClick={() => setAscFilter(!ascFilter)}>
                             <Image src={FilterImage} alt='carrinho' />
                         </WrapperButtonDesc>
                         <WrapperButtonSearch onClick={() => onSubmit()}>BUSCAR</WrapperButtonSearch>

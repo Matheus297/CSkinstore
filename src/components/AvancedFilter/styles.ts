@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { NumericComponent } from "../InputCurrency/styles";
 
 interface Props {
-    isActive?: boolean   
+    $isActive?: boolean   
 }
 
 
@@ -69,7 +69,7 @@ export const WrapperButtonDesc = styled.button<Props>`
     outline: none;
     
     & img {
-        transform: ${props => props.isActive ? `rotateX(200deg)` : 'rotateX(0deg)'};
+        transform: ${props => props.$isActive ? `rotateX(200deg)` : 'rotateX(0deg)'};
         transition: transform 0.6s ease-in-out; 
         box-shadow: none !important;
     }

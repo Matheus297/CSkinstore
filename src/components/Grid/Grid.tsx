@@ -61,7 +61,7 @@ export const GridComponent = ({itens}: GridProps) => {
     }
 
     return (
-        <Container isLoading={isLoading}>
+        <Container $isLoading={isLoading}>
             {!isLoading ? (
                 <GridContainer>
                 {itens && itens.map((item) => {
