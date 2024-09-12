@@ -42,6 +42,10 @@ para iniciar
    npm run dev ou yarn dev
    ````
 ### Rotas
+
+http://localhost:3001
+
+
 [**GET**] /skins
 
 Obtém todos os itens disponíveis.
@@ -83,6 +87,9 @@ Adiciona um novo item ao banco de dados.
   
 
 ## Frontend
+
+
+http://localhost:3000
 
 ### Tecnologias Usadas
 
