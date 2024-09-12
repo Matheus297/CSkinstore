@@ -87,6 +87,13 @@ const marks = [
 
     }
 
+    const handleChangeOrdem = () => {
+        setAscFilter((prevState: boolean) => {
+            prevState = !prevState
+            return prevState
+        })
+    }
+
     return (
         <Container>
             <Content>
@@ -106,7 +113,7 @@ const marks = [
                     <CurrencyInput value={minValue} setValue={setMinValue} />
                     <CurrencyInput value={maxValue} setValue={setMaxValue} />
                     <BoxStyleButtons>
-                        <WrapperButtonDesc $isActive={ascFilter} onClick={() => setAscFilter(!ascFilter)}>
+                        <WrapperButtonDesc $isActive={ascFilter} onClick={() => handleChangeOrdem()}>
                             <Image src={FilterImage} alt='carrinho' />
                         </WrapperButtonDesc>
                         <WrapperButtonSearch onClick={() => onSubmit()}>BUSCAR</WrapperButtonSearch>

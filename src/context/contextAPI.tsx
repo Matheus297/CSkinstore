@@ -24,6 +24,8 @@ export const MainProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   
       if (ascFilter) {
         sortedItems.sort((a, b) => b.price - a.price); 
+        
+      }else {
         sortedItems.sort((a, b) => a.price - b.price); 
       }
   

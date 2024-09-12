@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 
 export interface Props {
-    isLoading?: boolean
+    $isLoading?: boolean
 }
 
 export const Container = styled.div<Props>`
@@ -11,7 +11,7 @@ export const Container = styled.div<Props>`
     background-color: #111111;
     height: 100%;
 
-    ${props => props.isLoading && `
+    ${props => props.$isLoading && `
         
         display: flex;
         justify-content: center;
