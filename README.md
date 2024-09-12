@@ -1,18 +1,27 @@
-# Projeto CS:GO Skins
+## Tabela de Conteúdos
+
+- [Backend](#backend)
+  - [Tecnologias Usadas](#tecnologias-usadas)
+  - [Requisitos](#requisitos)
+  - [Rotas](#rotas)
+- [Frontend](#frontend)
+  - [Estilização](#estilização)
 
 ## Backend
 
 ### Tecnologias Usadas
 
-- **Node.js**: Ambiente de execução JavaScript no servidor.
-- **Prisma**: ORM para interagir com o banco de dados.
-- **Fastify**: Framework web para Node.js, rápido e eficiente.
+- **Node.js**: Ambiente de execução para JavaScript no servidor.
+- **Prisma**: ORM para interagir com o banco de dados de forma eficiente.
+- **Fastify**: Framework para construção de APIs rápidas e leves.
 
 ### Requisitos
 
-1. **Node.js**: Versão 20+.
-2. **Yarn**: Gerenciador de pacotes.
-3. **pnpm**: Gerenciador de pacotes.
+Para executar o backend, você precisará das seguintes ferramentas:
+
+1. **Node.js 20+**: [Baixe e instale o Node.js](https://nodejs.org/).
+2. **Yarn**: Gerenciador de pacotes. [Instale o Yarn](https://classic.yarnpkg.com/lang/en/docs/install/).
+3. **pnpm**: Gerenciador de pacotes. [Instale o pnpm](https://pnpm.io/installation).
 
 ### Instalação
 
@@ -20,31 +29,38 @@
    ```bash
    cd backend
 Instale as dependências usando Yarn:
-bash
-Copiar código
-yarn
-Ou, se preferir npm:
-bash
-Copiar código
-npm install
-Rotas
-GET /skins
+   ```bash
+   yarn
+   ````
+e também use
+   ```bash
+   npm install
+   ````
 
-Descrição: Obtém todos os itens disponíveis.
-GET /skin
+para iniciar
+```bash
+   npm run dev ou yarn dev
+   ````
+### Rotas
+[**GET**] /skins
 
-Descrição: Obtém itens filtrados com base em parâmetros de consulta.
+Obtém todos os itens disponíveis.
+
+[**GET**] /skin
+
+Obtém itens filtrados com base em parâmetros de consulta.
 Parâmetros:
-price: Preço do item.
-name: Nome do item.
-category: Categoria do item (ex: sniper, assalt).
-float: Nível de desgaste do item (0 a 1).
-POST /skin
+- price: Preço do item.
+- min: Valor minimo do item
+- max: Valor máximo do item.
+- name: Nome do item.
+- category: Categoria do item (ex: sniper, assalt).
+- float: Nível de desgaste do item (0 a 1).
 
-Descrição: Adiciona um novo item ao banco de dados.
-Corpo da Requisição:
-json
-Copiar código
+[**POST**] /skin
+
+Adiciona um novo item ao banco de dados.
+```json
 {
     "name": "AK-47 | Case Hardened (blue gem)",
     "image": "https://www.csgodatabase.com/images/skins/webp/AK-47_Case_Hardened.webp",
@@ -54,33 +70,51 @@ Copiar código
     "price": 738.1,
     "pattern": 661
 }
-Campos:
-name: Nome do item (string).
-image: URL da imagem do item (preferencialmente no formato webp).
-category: Categoria do item (ex: assalt, sniper).
-float: Nível de desgaste do item (string, de 0 a 1).
-rarity: Raridade do item.
-price: Valor do item (número).
-pattern: Padrão do item (número), relevante para skins com múltiplos padrões.
-Frontend
-Tecnologias Usadas
-Next.js: Framework React para renderização do lado do servidor e geração de sites estáticos.
-BulmaCSS: Framework CSS para estilização.
-Styled Components: Biblioteca para estilização em componentes React.
-Material-UI (MUI): Biblioteca de componentes React, usada para componentes como Slider.
-Instalação
-Navegue até a pasta do frontend (fora da pasta backend):
-bash
-Copiar código
-cd frontend
-Instale as dependências:
-bash
-Copiar código
-npm install
-Estrutura do Projeto
-Contexto: A aplicação utiliza Context API para gerenciar o estado global e evitar chamadas desnecessárias.
-Organização das Pastas: As pastas estão organizadas para separar componentes, páginas e serviços. A página de serviço faz a chamada ao serviço e os dados são utilizados nos componentes.
-Estilização
-BulmaCSS: Utilizado para estilização básica e layout.
-Styled Components: Organiza o código CSS em componentes.
-MUI: Fornece componentes prontos como Slider para uma UI consistente e moderna.
+```
+### Campos
+- name: Nome do item (string).
+- image: URL da imagem do item (preferencialmente no formato webp).
+- category: Categoria do item (ex: assalt, sniper).
+- float: Nível de desgaste do item (string, de 0 a 1).
+- rarity: Raridade do item.
+- price: Valor do item (número).
+- pattern: Padrão do item (número), relevante para skins com múltiplos padrões.
+
+  
+
+## Frontend
+
+### Tecnologias Usadas
+
+- Next.js: Framework React para renderização do lado do servidor e geração de sites estáticos.
+- BulmaCSS: Framework CSS para estilização.
+- Styled Components: Biblioteca para estilização em componentes React.
+- Material-UI (MUI): Biblioteca de componentes React, usada para componentes como Slider.
+
+### Instalação
+
+1. Navegue até a pasta  saindo da pasta`backend`:
+   ```bash
+   cd backend
+Instale as dependências usando Yarn:
+   ```bash
+   yarn
+   ````
+e também use
+   ```bash
+   npm install
+   ````
+
+para iniciar
+```bash
+   npm run dev ou yarn dev
+   ````
+### Estrutura do Projeto
+
+- Contexto: A aplicação utiliza Context API para gerenciar o estado global e evitar chamadas desnecessárias.
+- Organização das Pastas: As pastas estão organizadas para separar componentes, páginas e serviços. A página de serviço faz a chamada ao serviço e os dados são utilizados nos componentes.
+
+### Estilização
+- BulmaCSS: Utilizado para estilização básica e layout.
+- Styled Components: Organiza o código CSS em componentes.
+- MUI: Fornece componentes prontos como Slider para uma UI consistente e moderna.
